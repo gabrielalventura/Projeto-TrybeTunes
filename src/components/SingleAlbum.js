@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-class MusicCard extends React.Component {
+class SingleAlbum extends React.Component {
   render() {
     const { searched } = this.props;
 
@@ -31,8 +31,8 @@ class MusicCard extends React.Component {
   }
 }
 
-MusicCard.propTypes = {
+SingleAlbum.propTypes = {
   searched: PropTypes.arrayOf,
 }.isRequired; // lint não deixou utilizar um objeto com forma especifica fazendo PropTypes.shape, dessa forma, optei pelo arrayOf sem especificar o tipo básico pois há number e string no objeto
 
-export default MusicCard;
+export default SingleAlbum;

@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
-import MusicCard from '../components/MusicCard';
+import SingleAlbum from '../components/SingleAlbum';
 
 class Search extends React.Component {
   constructor() {
@@ -106,7 +106,7 @@ class Search extends React.Component {
                     </h2>
                   </div>
                   {(researchedInfo.length > 0)
-                    ? <MusicCard searched={ researchedInfo } />
+                    ? <SingleAlbum searched={ researchedInfo } />
                     : <span> Nenhum álbum foi encontrado </span>}
                 </div>
               )}
