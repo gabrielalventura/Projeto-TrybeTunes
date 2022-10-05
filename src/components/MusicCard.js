@@ -17,14 +17,24 @@ class MusicCard extends React.Component {
           <code>audio</code>
           .
         </audio>
-
+        <label
+          htmlFor={ music.trackName }
+          data-testid={ `checkbox-music-${music.trackId}` }
+        >
+          <input
+            name="liked"
+            id={ music.trackName }
+            type="checkbox"
+          />
+          Favorita
+        </label>
       </section>
     );
   }
 }
 
 MusicCard.propTypes = {
-  music: PropTypes.arrayOf.isRequired,
-};
+  music: PropTypes.object,
+}.isRequired;
 
 export default MusicCard;
